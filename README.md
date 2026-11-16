@@ -59,3 +59,10 @@ the right behaviour.
 `clock` is a zero-argument callable returning a monotonically increasing float;
 it defaults to `time.monotonic`. `rng` is a `random.Random` instance. Both are
 injected so tests can be deterministic.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+

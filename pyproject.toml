@@ -1,6 +1,6 @@
 [project]
 name = "mini-backoff-plan"
-version = "0.1.0"
+version = "0.1.1"
 description = "Generates retry delays with jitter, bounded by an overall time limit."
 requires-python = ">=3.10"
 dependencies = []
